@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="styles.css"/>
+
+
+<style>
+
+
+
+.image img {
+            width: 200px;
+            height: auto;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .image:hover img {
+
+            transform: translateX(-30px);
+        }
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+  background-color: #fab189;
+font-family: Arial, sans-serif;
+
+}
+
+marquee {
+  color: white;
+
+}
+table {
+  border-collapse: collapse;
+  border: 1px solid;
+  padding: 15px;
+  text-align: left;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #e16724;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #e16724;
+  color: white;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child) {display: none;}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  height: 500px; 
+  background-color: #fab189;
+}
+
+.left, .right {
+  width: 33%;
+}
+
+.middle {
+  width: 34%;
+  padding-top:50px;
+}
+
+div.slideshow-container {
+  overflow: auto;
+  white-space: nowrap;
+  height : 50%;
+  width : 100%;
+}
+
+div.slide {
+  display:none;
+}
+
+div.slide img {
+  width: 100%;
+  height: 500px;
+  padding: 10px;
+}
+
+/* Add animation */
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+
+table {
+            width: 100%;
+            border: none;
+            border-collapse: collapse;
+            background-color: #fffaf1;
+            border-radius: 45px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        table:hover {
+            transform: scale(1.05);
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #e16724;
+            color: #ffffff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #fffff0;
+        }
+
+        tr:hover {
+            background-color: #e8a580;
+        }
+
+
+
+
+  form {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fab189;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="payment"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      background-color: #fffaf1;
+    }
+
+
+    .orderbtn {
+      background-color: #e16724;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 3px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .orderbtn:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--box-shadow);
+    }
+
+
+
+
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #202123;
+  color: white;
+  text-align: center;
+    padding: 15px;
+}
+
+.footer a {
+  color: white;
+  margin-right: 5px;
+}
+
+
+
+
+
+
+/* Footer */
+
+.foot .top {
+  background-color: var(--footer-yellow);
+  padding: 10rem 9%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
+
+.foot .top .links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3rem;
+}
+
+.foot .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+  background-color: var(--deep-yellow);
+}
+
+.foot .top .content p {
+  color: var(--grey);
+  margin-top: 2rem;
+  width: 90%;
+}
+
+.foot .top .link h4 {
+  font-size: 1.7rem;
+  margin-bottom: 1.5rem;
+}
+
+.foot .top .link a {
+  display: inline-block;
+  color: var(--grey);
+  margin-bottom: 1rem;
+}
+
+.foot .top .link span {
+  color: var(--grey);
+}
+
+.foot .top .link a {
+  display: block;
+}
+
+.foot .top .link div {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.foot .top .link div img {
+  margin-right: 1rem;
+}
+
+
+
+
+
+    #map {
+      height: 100px;
+      width: 100%;
+    }
+  
+
+
+
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+<div class="topnav" id="myTopnav">
+  <a href="#home" class="active">Home</a>
+  <a href="signup.html">Sign Up</a>
+  <a href="contact.html">Contact</a>
+  <a><li style="float:right"><a href="process.php">Profile</a></li>
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
+
+
+
+
+<div id="home-top-video">
+<video id="background-video" autoplay loop muted>
+<source src="https://player.vimeo.com/external/371835284.sd.mp4?s=c5833f16b4513b327eda20b77835abcc98fa9647&profile_id=164&oauth2_token_id=57447761" type="video/mp4"></video>
+
+<img src="Foodie.png" height="400" style="float:right"></img>
+</div>
+
+
+
+
+
+<marquee bgcolor=black height=25px hspace="25%">Food is essential to life,therefore make it good.</marquee>
+
+
+  <section class="services" id="services">
+        <div class="top">
+          <h2><span class="yellow">Why</span> We are the Best</h2>
+          <p>
+            We deliver healthy, yummy & delicious food with special offer and amazing discounts. you can order food for yourself or for your group in affordable prices. our delivered food is 100% fresh & hygenic.
+          </p>
+        </div>
+  
+        <div class="bottom">
+          <div class="box">
+            <img src="img/delivery-man.svg" alt="" />
+            <h4>Free Delivery</h4>
+            <p>
+              Get Amazing Discounts,Free Delivery on Meals, Healthy & Nutritious Food. Tastily prepared meals. Affordable Tasty Food.
+            </p>
+            <a href="signup.html">View More <img src="img/btn-arrow.svg" alt="" /> </a>
+          </div>
+          <div class="box">
+            <img src="img/fast-food.svg" alt="" />
+            <h4>Healthy Foods</h4>
+            <p>
+              We offer Healthy, Yummy, Nutritious, Classic Meals. <br>100% Fresh & Hygienic. 
+            </p>
+            <a href="signup.html">View More <img src="img/btn-arrow.svg" alt="" /> </a>
+          </div>
+          <div class="box">
+            <img src="img/order-food.svg" alt="" />
+            <h4>Online Ordering</h4>
+            <p>
+              Order platters and party must-haves online from the best restaurants. A place for every taste, easy to find food you and your group crave.
+            </p>
+            <a href="signup.html">View More <img src="img/btn-arrow.svg" alt="" /> </a>
+          </div>
+        </div>
+      </section>
+  
+
+
+
+<div class="column middle" style="background-color:fab189;">
+    
+    <p><font size="3" face="Times New Roman">
+ <center><font size="4"><b>Let food be thy medicine and medicine be thy food.</b></font></center>
+<br>
+        
+<table>
+    <tr>
+      <th>Sr No.</th>
+      <th>FOOD</th>
+      <th>PRICE</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>PASTA</td>
+      <td>250</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>NOODLES</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>SANDWHICH</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>PIZZA</td>
+      <td>250</td>
+    </tr>
+    <tr>
+      <td>5</td>
+      <td>HOT DOG</td>
+      <td>125</td>
+    </tr>
+    <tr>
+      <td>6</td>
+      <td>BURGER</td>
+      <td>200</td>
+    </tr>
+      <tr>
+      <td>7</td>
+      <td>FRIES</td>
+      <td>100</td>
+    </tr>
+      <tr>
+      <td>8</td>
+      <td>CAPPUCCINO</td>
+      <td>100</td>
+    </tr>
+      <tr>
+      <td>9</td>
+      <td>ICE-CREAM</td>
+      <td>100</td>
+    </tr>
+      <tr>
+      <td>10</td>
+      <td>CHOCOLATE CAKE</td>
+      <td>350</td>
+    </tr>
+  </table>
+           </font>
+        
+          
+          
+        </p>
+      
+  </div>
+
+
+
+
+
+  <section class="home" id="home">
+      <div class="content">
+        <h1>Order Your Product <span class="yellow">Easier & Faster.</span></h1>
+        <p>
+          Delivero is a leading global online food delivery marketplace,
+          connecting consumers and restaurants through its platform in 24
+          countries.
+        </p>
+        <a href="signup.html" class="home-btn">Go to Menu</a>
+      </div>
+      <div class="image">
+        <img src="img/Delivery%20address.svg" alt="" />
+      </div>
+
+    </section>
+
+
+  
+  <div class="slideshow-container" style="float: right;">
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/17172217/pexels-photo-17172217/free-photo-of-cake-with-strawberries-on-plate.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 1" width="100%" height="300">
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 2" width="100%" height="300">
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 3" width="100%" height="300">
+    </div>
+    <div class="slide">
+      <img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Image 4" width="100%" height="300">
+    </div>
+  </div>
+
+
+  
+
+      <section class="about" id="about">
+        <div class="image">
+          <img src="img/illus%20riding.svg" alt="" />
+        </div>
+        <div class="content">
+          <h3><span class="yellow">Order</span> anytime and anywhere</h3>
+          <p>
+            Order in for yourself or for the group, with no restrictions on order value, place & time.
+          </p>
+          <a href="signup.html" class="btn">Make an Order</a>
+        </div>
+      </section>
+  
+
+      <section class="about about-2">
+        <div class="content">
+          <h3>
+            <span class="yellow">Deliver</span> the products with best safety
+          </h3>
+          <p>
+            Experience Delivero superfast delivery for food delivered fresh & on time
+          </p>
+          <a href="signup.html" class="btn">Make an Order</a>
+        </div>
+  
+        <div class="image">
+          <img src="img/illus%20deliver.svg" alt="" />
+        </div>
+      </section>
+  
+
+      <section class="about about-3" style="gap: 3rem 13rem">
+        <div class="image">
+          <img src="img/buying%20online.svg" alt="" />
+        </div>
+  
+        <div class="content">
+          <h3><span class="yellow">Track</span> your order very easily</h3>
+          <p>
+            Know where your order is at all times, from the restaurant to your doorstep
+          </p>
+          <a href="signup.html" class="btn">Track Now</a>
+        </div>
+      </section>
+  
+
+      <section class="app" id="contact">
+        <div class="image">
+          <img src="img/output (1).png">
+        </div>
+        <div class="content">
+          <h3>Place your order through our app</h3>
+          <p>
+            You can easily place your order using our mobile app. Now you can
+            download our app for both IOS and Android mobiles.
+          </p>
+          <div class="links">
+            <img src="img/app-store.png" alt="" />
+            <img src="img/google-play.png" alt="" />
+          </div>
+        </div>
+      </section>
+  
+
+
+ 
+
+<footer class="foot">
+        <div class="top">
+          <div class="content">
+            <a href="" class="logo">Food<span class="yellow">ie</span></a>
+            <p>
+              We deliver healthy, yummy & delicious food with special offer and amazing discounts. 
+            </p>
+          </div>
+  
+          <div class="links">
+            <div class="link">
+              <h4>Contact Information</h4>
+              <div>
+                <img src="img/location-cross.svg" alt="" />
+                <span>TE COMP A,TCET, Mumbai.</span>
+              </div>
+              <div>
+                <img src="img/sms-tracking.svg" alt="" />
+                <span>purva600@gmail.com</span>
+              </div>
+            </div>
+  
+            <div class="link">
+              <h4>Quick Links</h4>
+              <a href="#">Services</a>
+              <a href="#">About Us</a>
+              <a href="#">Contact Us</a>
+              <a href="#">Download</a>
+            </div>
+  
+            <div class="link">
+              <h4>Legal</h4>
+              <a href="#">Privacy Policy</a>
+              <a href="#">Term of Use</a>
+              <a href="#">Conditions</a>
+              <a href="#">Location</a>
+            </div>
+  
+<div class="link">
+
+
+
+ <h1>Geolocation Map</h1>
+  <div id="map"></div>
+
+<iframe align=center src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15071.011164896045!2d72.8745635!3d19.2059968!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc0aec329c82d3555!2sThakur%20College%20of%20Engineering%20and%20Technology!5e0!3m2!1sen!2sin!4v1659690119804!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" 
+referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+</div>
+
+            
+          </div>
+        </div>
+        <div class="bottom">
+          <p>Copyright © 2023 Foodie Group 5 SE.COMP.A All rights reserved.</p>
+<br><br><br><br><br><br>
+        </div>
+
+
+
+
+      </footer>
+
+
+<footer class="footer">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-youtube"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-google"></i></a>
+</footer>
+<script>
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+}
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+var slides = document.querySelectorAll('.slide');
+var currentSlide = 0;
+
+function showSlide() {
+// Hide all slides
+for (var i = 0; i < slides.length; i++) {
+slides[i].style.display = 'none';
+}
+// Show current slide
+slides[currentSlide].style.display = 'block';
+}
+
+function nextSlide() {
+currentSlide++;
+if (currentSlide >= slides.length) {
+currentSlide = 0;
+}
+showSlide();
+}
+
+// Initial setup
+showSlide();
+
+// Start slideshow
+setInterval(nextSlide, 3000); // Change slide every 3 seconds
+});
+
+</script>
+<script>
+  // jQuery code to toggle navigation menu
+  $(document).ready(function() {
+    $(".icon").click(function() {
+      $("#myTopnav").toggleClass("responsive");
+    });
+  });
+</script>
+
+</body>
+
+
+
+</html>
+
+

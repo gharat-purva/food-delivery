@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        h1 {
+            font-style: italic;
+            color: black;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+	body {
+     	font-family: Arial, sans-serif;
+	background-image: url("https://images.pexels.com/photos/2961968/pexels-photo-2961968.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    	background-repeat: no-repeat;
+	background-size: cover;
+    }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0px;
+            overflow: hidden;
+            background-color: #333;
+	    position: fixed;
+	    width: 100%;
+        }
+        li {
+            float: left;
+            border-right: none;
+        }
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover:not(.active) {
+            background-color: #eb7846;
+        }
+        .active {
+            background-color: #e16724;
+        }
+        .footer {
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #202123;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+        .footer a {
+            color: white;
+            margin-right: 5px;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .main_heading {
+            text-align: center;
+            margin-bottom: 20px;
+            margin-top: 40px;
+        }
+        hr {
+            margin-bottom: 20px;
+        }
+        p {
+            margin-bottom: 10px;
+        }
+        label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="password"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #dddddd;
+            border-radius: 4px;
+        }
+        fieldset {
+            margin-bottom: 20px;
+        }
+        legend {
+            font-weight: bold;
+        }
+        input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #e16724;
+            color: #ffffff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Dark Mode Styles */
+        .dark-mode form {
+            background-color: #202123;
+            color: #ffffff;
+
+        }
+        .dark-mode h1,
+        .dark-mode h2,
+        .dark-mode label,
+        .dark-mode legend,
+        .dark-mode p {
+            color: #ffffff;
+        }
+        .dark-mode input[type="text"],
+        .dark-mode input[type="email"],
+        .dark-mode input[type="number"],
+        .dark-mode input[type="password"],
+        .dark-mode textarea,
+        .dark-mode select {
+            background-color: #404143;
+            color: #ffffff;
+            border: 1px solid #dddddd;
+        }
+        .dark-mode input[type="submit"] {
+            background-color: #e16724;
+            color: #ffffff;
+        }
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="signup.html">Sign Up</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li style="float:right"><a class="active" href="payment_form.html">Payment</a></li>
+    </ul>
+
+
+
+
+    <form action="#" method="get">
+        <h1 class="main_heading">Payment Form</h1>
+
+        <hr><input onclick="toggleDarkMode()" type="submit" value="🌙">
+        <p>Required Fileds Are Followed By *</p>
+        <h2>Contact Information</h2>
+        <p>
+            <label for="name">Name: *</label>
+            <input type="text" required name="name" placeholder="Harry Potter">
+        </p>
+        <fieldset>
+            <legend>Gender *</legend>
+            <p>
+                <input type="radio" name="gender" id="male" required>
+                <label for="male">Male</label>
+                <input type="radio" name="gender" id="female" required>
+                <label for="female">Female</label>
+            </p>
+        </fieldset>
+        <p>
+            <label for="address">Address:</label>
+            <textarea name="address" id="address" cols="80" rows="5"></textarea>
+        </p>
+        <p>
+            <label for="email">Email: *</label>
+            <input type="email" name="email" id="email" required>
+        </p>
+        <p>
+            <label for="pincode">Pincode: *</label>
+            <input type="number" name="pincode" id="pincode" required>
+        </p>
+        <hr>
+        <h2>Payment Information</h2>
+        <p>
+            <label for="card_type">Card Type: *</label>
+            <select name="card_type" id="card_type" required>
+                <option value="">-----Select a Card Type-----</option>
+                <option value="visa">Visa</option>
+                <option value="rupay">Rupay</option>
+                <option value="mastercard">Mastercard</option>
+            </select>
+        </p>
+        <p>
+            <label for="card_number">Card Number: *</label>
+            <input type="number" name="card_number" id="card_number" required>
+        </p>
+        <p>
+            <label for="exp_date">Expiration Date:</label>
+            <input type="date" name="exp_date" id="exp_date">
+        </p>
+        <p>
+            <label for="cvv">CVV: *</label>
+            <input type="password" name="cvv" id="cvv" required>
+        </p>
+        <input type="submit" value="Pay Now">
+
+
+    </form>
+
+    <footer class="footer">
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-google"></i></a>
+    </footer>
+
+    <script>
+        function toggleDarkMode() {
+            const body = document.body;
+            body.classList.toggle("dark-mode");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+	<title>ContactUs</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf1;
+    }
+
+/* CSS styles for Dark Mode */
+.dark-mode {
+  background-color: #202123;
+  color: white;
+}
+
+.dark-mode .form-container {
+  /* Dark mode form container background gradient */
+  background: linear-gradient(to right, #d98b66, #d67140);
+  /* Rest of the styles */
+}
+
+.dark-mode .form-container label {
+  /* Dark mode label color */
+  color: white;
+  /* Rest of the styles */
+}
+
+.dark-mode .form-container input[type="text"],
+.dark-mode .form-container input[type="email"],
+.dark-mode .form-container input[type="phone"],
+.dark-mode .form-container textarea,
+.dark-mode .form-container select {
+  /* Dark mode input field background color */
+  background-color: #424242;
+  /* Dark mode input field text color */
+  color: white;
+  /* Rest of the styles */
+}
+
+.dark-mode .form-container input[type="submit"],
+.dark-mode .form-container input[type="reset"] {
+  /* Dark mode submit and reset button background color */
+  background-color: #e16724;
+  /* Dark mode submit and reset button text color */
+  color: #ffffff;
+  /* Rest of the styles */
+}
+
+    .dark-mode .footer {
+      /* Dark mode footer background color */
+      background-color: #555555;
+      /* Rest of the styles */
+    }
+
+
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0px;
+  overflow: hidden;
+  background-color: #333;
+  position: fixed;
+  width: 100%;
+margin-bottom: 10px;
+}
+
+li {
+  float: left;
+  border-right: none;
+}
+
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:#eb7846;
+}
+
+.active {
+  background-color: #e16724;
+}
+
+
+  .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fab189;
+      padding: 40px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-shape {
+      margin-bottom: 20px;
+    }
+
+    .form-shape label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .form-shape input[type="text"],
+    .form-shape input[type="email"],
+    .form-shape input[type="phone"],
+    .form-shape textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #d6803e;
+      border-radius: 4px;
+    }
+
+    #radio {
+      margin-bottom: 20px;
+    }
+
+    #radio label {
+      display: inline-block;
+      margin-right: 10px;
+    }
+
+    .form-container input[type="submit"],
+    .form-container input[type="reset"] {
+      padding: 10px 20px;
+      background-color: #e16724;
+      color: #ffffff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-container input[type="submit"] {
+      margin-right: 10px;
+    }
+
+
+
+
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #202123;
+  color: white;
+  text-align: center;
+    padding: 15px;
+   position: fixed;
+}
+
+.footer a {
+  color: white;
+  margin-right: 5px;
+}
+
+   .dark-mode-toggle-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+    
+    .dark-mode-toggle-container label {
+      margin-left: 5px;
+    }
+ 
+     .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .toggle-switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .toggle-switch-slider {
+      background-color: #e16724;
+    }
+
+    input:checked + .toggle-switch-slider:before {
+      transform: translateX(20px);
+    }
+
+    .toggle-switch-slider.round {
+      border-radius: 20px;
+    }
+
+    .toggle-switch-slider.round:before {
+      border-radius: 50%;
+    }
+
+
+  
+
+</style>
+</head>
+
+<body>
+<ul>
+  <li><a href="home.html">Home</a></li>
+  <li><a href="signup.html">Sign Up</a></li>
+  <li><a class="active" href="contact.html">Contact</a></li>
+  <li style="float:right"><a href="process.php">Profile</a></li>
+</ul>
+
+<br><br><br>
+ <div class="dark-mode-toggle-container">
+    <label for="dark-mode-toggle" class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="toggle-switch-slider round"></span>
+    </label>
+    <label for="dark-mode-toggle">View in Dark Mode</label>
+  </div>
+
+	  <div class="form-container">
+    <h2>Contact Us</h2>
+    <form action="process_contact.php" method="POST">
+      <div class="form-shape">
+        <label for="query">Type of Query:</label>
+        <select name="myQuery" id="query">
+          <option value="sel" selected>Select</option>
+          <option value="ord">Order related Issues</option>
+          <option value="Site">Site related Issues</option>
+          <option value="fed">Complaint related Issues</option>
+          <option value="others">Others</option>
+        </select>
+      </div>
+
+      <div class="form-shape">
+        <label for="name">Name:</label>
+        <input type="text" name="myName" id="name" placeholder="Enter your Name">
+      </div>
+
+      <div class="form-shape">
+        <label for="email">Email-Id:</label>
+        <input type="email" name="myEmail" id="email" placeholder="Enter your email">
+      </div>
+
+      <div class="form-shape">
+        <label for="pho">Phone Number:</label>
+        <input type="text" name="myPhone" id="pho" placeholder="Enter your Phone no">
+      </div>
+
+      <div id="radio">
+        Are you a member of OnlineFoodShop?
+        <label><input type="radio" name="eligible"> Yes</label>
+        <label><input type="radio" name="eligible"> No</label>
+      </div>
+
+      <div class="form-shape">
+        <label for="message">Elaborate your query:</label>
+        <textarea name="mesg" id="message" cols="30" rows="10"></textarea>
+      </div>
+
+      <input type="submit" value="Submit">
+      <input type="reset" value="Reset">
+    </form>
+  </div>
+<br><br><br>
+  <script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const inputFields = document.querySelectorAll('input[type="email"], input[type="password"]');
+    const formContainer = document.querySelector('.form-container');
+
+    darkModeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        inputFields.forEach(input => {
+          input.classList.add('dark-mode-input');
+        });
+        formContainer.classList.add('dark-mode-form-container');
+      } else {
+        document.body.classList.remove('dark-mode');
+        inputFields.forEach(input => {
+          input.classList.remove('dark-mode-input');
+        });
+        formContainer.classList.remove('dark-mode-form-container');
+      }
+    });
+  </script>
+</body>
+<footer class="footer">
+  <a href="#"><i class="fab fa-facebook-f"></i></a>
+  <a href="#"><i class="fab fa-twitter"></i></a>
+  <a href="#"><i class="fab fa-youtube"></i></a>
+  <a href="#"><i class="fab fa-instagram"></i></a>
+  <a href="#"><i class="fab fa-google"></i></a>
+</footer>
+
+</html>

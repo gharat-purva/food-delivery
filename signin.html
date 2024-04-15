@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sign In</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+
+  <style>
+    /* CSS styles for the page */
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .form-container {
+      /* Default form container background gradient */
+      background: linear-gradient(to right, #fab189, #f1b662);
+      /* Rest of the styles */
+    }
+
+    /* CSS styles for Dark Mode */
+
+    .dark-mode {
+      background-color: #202123;
+      color: white;
+    }
+
+    .dark-mode .form-container {
+      /* Dark mode form container background gradient */
+      background: linear-gradient(to right, #d98b66, #d67140);
+      /* Rest of the styles */
+    }
+
+    .dark-mode .form-container label {
+      /* Dark mode label color */
+      color: white;
+      /* Rest of the styles */
+    }
+
+    .dark-mode .form-container input[type="email"],
+    .dark-mode .form-container input[type="password"] {
+      /* Dark mode input field background color */
+      background-color: #424242;
+      /* Dark mode input field text color */
+      color: white;
+      /* Rest of the styles */
+    }
+
+    .dark-mode .footer {
+      /* Dark mode footer background color */
+      background-color: #555555;
+      /* Rest of the styles */
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0px;
+      overflow: hidden;
+      background-color: #333;
+    }
+
+    li {
+      float: left;
+      border-right: none;
+    }
+
+    li a {
+      display: block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover:not(.active) {
+      background-color: #eb7846;
+    }
+
+    .active {
+      background-color: #e16724;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf1;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+  
+
+    .form-container {
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fab189;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .form-container label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .form-container input[type="email"],
+    .form-container input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #d6803e;
+      border-radius: 4px;
+    }
+
+    .form-container .button-container {
+      text-align: center;
+    }
+
+    .form-container .button-container button {
+      padding: 10px 20px;
+      background-color: #fff4d4;
+      color: #e16724;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .form-container .button-container button:first-child {
+      margin-right: 10px;
+    }
+
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: #313233;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .footer a {
+      color: white;
+      margin-right: 5px;
+    }
+    
+    .dark-mode-toggle-container {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      margin-right: 20px;
+      margin-top: 10px;
+    }
+    
+    .dark-mode-toggle-container label {
+      margin-left: 5px;
+    }
+
+     .toggle-switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+    }
+
+    .toggle-switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .toggle-switch-slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 20px;
+    }
+
+    .toggle-switch-slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      transition: .4s;
+      border-radius: 50%;
+    }
+
+    input:checked + .toggle-switch-slider {
+      background-color: #e16724;
+    }
+
+    input:checked + .toggle-switch-slider:before {
+      transform: translateX(20px);
+    }
+
+    .toggle-switch-slider.round {
+      border-radius: 20px;
+    }
+
+    .toggle-switch-slider.round:before {
+      border-radius: 50%;
+    }
+
+
+.signin-card {
+      background-color: #f1b662;
+      width: 600px; /* Adjust the width as needed */
+      margin: 0 auto;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+    }
+
+    .signin-image {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .signin-image img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .form-container {
+      flex: 1;
+    }
+
+    .form-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+
+
+
+    @media (max-width: 768px) {
+      .signin-card {
+        flex-direction: column;
+      }
+
+      .signin-image {
+        margin-bottom: 20px;
+      }
+
+      .form-container {
+        max-width: 100%;
+      }
+    }
+  @media (max-width: 768px) {
+      .signin-card {
+        flex-direction: column;
+      }
+
+  </style>
+</head>
+<body>
+  <ul>
+    <li><a href="home.html">Home</a></li>
+    <li><a href="signup.html" class="active">Sign Up</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li style="float:right"><a href="process.php">Profile</a></li>
+  </ul>
+
+ <div class="dark-mode-toggle-container">
+    <label for="dark-mode-toggle" class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle">
+      <span class="toggle-switch-slider round"></span>
+    </label>
+    <label for="dark-mode-toggle">View in Dark Mode</label>
+  </div>
+<br>
+
+  <div class="signin-card">
+    <div class="signin-image">
+      <img src="https://images.unsplash.com/photo-1497034825429-c343d7c6a68f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80" alt="Signin Image">
+    </div>
+    <div class="form-container">
+        <h2>Sign In</h2>
+        <form action="process.php" method="POST">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="example@example.com" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" placeholder="Enter Strong Password..." required>
+
+      <div class="button-container">
+        <button type="submit">Sign In</button>
+        <button type="button">Forgot Password</button>
+      </div>
+    </form>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <a href="#"><i class="fab fa-facebook-f"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-youtube"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-google"></i></a>
+  </footer>
+
+  <script>
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    const inputFields = document.querySelectorAll('input[type="email"], input[type="password"]');
+    const formContainer = document.querySelector('.form-container');
+
+    darkModeToggle.addEventListener('change', function() {
+      if (this.checked) {
+        document.body.classList.add('dark-mode');
+        inputFields.forEach(input => {
+          input.classList.add('dark-mode-input');
+        });
+        formContainer.classList.add('dark-mode-form-container');
+      } else {
+        document.body.classList.remove('dark-mode');
+        inputFields.forEach(input => {
+          input.classList.remove('dark-mode-input');
+        });
+        formContainer.classList.remove('dark-mode-form-container');
+      }
+    });
+  </script>
+</body>
+</html>
